@@ -394,3 +394,47 @@ transform:translateY(0);
 opacity:1;
 }
 }
+/* MOBILE RESPONSIVE */
+@media (max-width:768px){
+
+.header{
+padding:15px 5%;
+}
+
+.navbar a{
+font-size:14px;
+margin-left:10px;
+}
+
+.home{
+flex-direction:column;
+text-align:center;
+padding-top:120px;
+}
+
+.home-content h1{
+font-size:32px;
+}
+
+.home-content h3{
+font-size:20px;
+}
+
+.home-content p{
+font-size:14px;
+}
+
+.home-img img{
+width:260px;
+margin-top:20px;
+}
+
+.social-media{
+justify-content:center;
+}
+
+.btn{
+margin-top:20px;
+}
+
+}
