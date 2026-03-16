@@ -14,12 +14,17 @@
 </head>
 
 <body>
-
 <header class="header">
+
+<div class="logo-area">
+
+<img src="logo.jpeg" class="logo-img">
 
 <a class="logo">Portfolio</a>
 
-<nav class="navbar">
+</div>
+
+<nav class="navbar" id="navbar">
 
 <a onclick="showSection('home')">Home</a>
 <a onclick="showSection('about')">About</a>
@@ -29,7 +34,12 @@
 
 </nav>
 
+<div class="menu-icon" onclick="toggleMenu()">
+☰
+</div>
+
 </header>
+
 
 
 
@@ -157,7 +167,8 @@ Learn continuously. Build consistently. Grow confidently.
 Interested in Python, AI and Machine Learning opportunities.
 </p>
 
-</div>
+</div><br>
+  
 
 <button onclick="toggleAbout()" class="btn" id="aboutBtn">
 More About Me
@@ -413,12 +424,33 @@ btn.innerHTML="More About Me";
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script>
 var typed = new Typed(".multiple-text", {
-strings: ["Machine Learning Learner", "Python Developer", "AI Enthusiast"],
+strings: ["AI & ML Enthusiast", "Python Developer"],
 typeSpeed: 100,
 backSpeed: 100,
 backDelay: 1000,
 loop: true
 });
+</script>
+<script>
+function toggleMenu(){
+document.getElementById("navbar").classList.toggle("active");
+}
+
+function showSection(id){
+
+let sections = document.querySelectorAll(".section");
+
+sections.forEach(function(section){
+section.classList.remove("active");
+});
+
+document.getElementById(id).classList.add("active");
+
+/* close menu on mobile */
+
+document.getElementById("navbar").classList.remove("active");
+
+}
 </script>
 
 </body>
